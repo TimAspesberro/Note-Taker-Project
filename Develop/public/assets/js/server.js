@@ -18,3 +18,15 @@ app.get('/api/notes', (req, res) => {
         res.json(data)
     })
 });
+
+app.post('/api/notes', (req, res) => {
+    const bodyData = req.body;
+
+    res.writeFile('Develop\db\db.json', bodyData, (err) => {
+        if (err) 
+        console.log(err);
+        else {
+        console.log('note recieved')
+        }
+    })
+});
