@@ -20,7 +20,7 @@ app.get('/api/notes', (req, res) => {
 app.post('/api/notes', (req, res) => {
     const bodyData = req.body;
 
-    res.writeFile('Develop\db\db.json', bodyData, (err) => {
+    res.writeFile('db\db.json', bodyData, (err) => {
         if (err) 
         console.log(err);
         else {
